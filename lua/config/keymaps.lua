@@ -31,8 +31,3 @@ keymap("n", "<S-Down>", ":resize -2<CR>", { desc = "Resize split ↓ (shorter)" 
 
 -- add below
 keymap("n", "<leader>ab", "Yp^", { desc = "Duplicate line and jump to first char" })
-
--- Run Javac for all the programs within the project and output them in out folder
-keymap("n", "<leader>jc", function()
-  vim.cmd("belowright split | terminal javac -d out $(find . -name '*.java')")
-end, { desc = "Compile all Java files to out folder" })
