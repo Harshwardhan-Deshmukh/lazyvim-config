@@ -9,7 +9,8 @@ keymap("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
 
 keymap("n", "J", "mzJ`z", { desc = "Join current line with next line without moving the cursor" })
 
-keymap("n", "<leader>fv", ":Ex<CR>", { desc = "Open Explorer" })
+-- project view
+keymap("n", "<leader>pv", ":Ex<CR>", { desc = "Open Explorer" })
 
 keymap("n", "<leader>o", "o<Esc>k", { desc = "Add new line below (stay in place)" })
 keymap("n", "<leader>O", "O<Esc>j", { desc = "Add new line above (stay in place)" })
@@ -25,4 +26,5 @@ keymap("n", "<S-Right>", ":vertical resize +5<CR>", { desc = "Resize split → (
 keymap("n", "<S-Up>", ":resize +2<CR>", { desc = "Resize split ↑ (taller)" })
 keymap("n", "<S-Down>", ":resize -2<CR>", { desc = "Resize split ↓ (shorter)" })
 
-keymap("n", "<leader>cu", "Yp^", { desc = "Duplicate line and jump to first char" })
+-- add below
+keymap("n", "<leader>ab", "Yp^", { desc = "Duplicate line and jump to first char" })
