@@ -29,5 +29,8 @@ keymap("n", "<S-Right>", ":vertical resize +5<CR>", { desc = "Resize split → (
 keymap("n", "<S-Up>", ":resize +2<CR>", { desc = "Resize split ↑ (taller)" })
 keymap("n", "<S-Down>", ":resize -2<CR>", { desc = "Resize split ↓ (shorter)" })
 
--- add below
+-- add current line below
 keymap("n", "<leader>ab", "Yp^", { desc = "Duplicate line and jump to first char" })
+
+-- Open terminal and compile the current Java file
+vim.api.nvim_set_keymap("n", "<leader>jc", ":term javac -d out %<CR>", { noremap = true, silent = true })
