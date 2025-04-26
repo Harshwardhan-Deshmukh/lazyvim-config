@@ -21,7 +21,7 @@ return {
     priority = 1000, -- make sure it loads before other plugins
     config = function()
       require("vscode").setup({
-        transparent = true,
+        -- transparent = true,
         italic_comments = true,
       })
       vim.cmd.colorscheme("vscode")
