@@ -3,11 +3,9 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     keys = {
-      -- Disable the default <leader>sg keymap
-      { "<leader>sg", false },
       -- Load custom keymaps <leader>sg keymap with hidden files
       {
-        "<leader>sg",
+        "<leader>sx",
         function()
           require("telescope.builtin").live_grep({
             additional_args = function()
@@ -17,13 +15,9 @@ return {
         end,
         desc = "Live Grep (including hidden files)",
       },
-
-      -- Disable LazyVim's default <leader>ff
-      { "<leader>ff", false },
-
       -- Add custom find_files (including hidden files)
       {
-        "<leader>ff",
+        "<leader>fx",
         function()
           require("telescope.builtin").find_files({
             hidden = true,
