@@ -8,6 +8,12 @@ local keymap = vim.keymap.set
 keymap("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
 keymap("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
 
+keymap("i", "<D-BS>", "<C-u>", { desc = "Delete entire line in insert mode (no yank)" })
+keymap("i", "<A-BS>", "<C-w>", { desc = "Delete word in insert mode (no yank)" })
+keymap("i", "<D-Left>", "<C-o>^", { desc = "Move to beginning of line in insert mode" })
+keymap("i", "<D-Right>", "<C-o>$", { desc = "Move to end of line in insert mode" })
+keymap("i", "<A-Left>", "<C-Left>", { desc = "Move back a word in insert mode" })
+keymap("i", "<A-Right>", "<C-Right>", { desc = "Move forward a word in insert mode" })
 keymap("n", "J", "mzJ`z", { desc = "Join current line with next line without moving the cursor" })
 
 -- project view
