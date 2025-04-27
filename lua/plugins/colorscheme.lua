@@ -1,19 +1,19 @@
--- lua/plugins/rose-pine.lua
-return {
-  "rose-pine/neovim",
-  name = "rose-pine",
-  config = function()
-    require("rose-pine").setup({
-      styles = {
-        bold = true,
-        italic = false,
-        transparency = true,
-      },
-    })
-    vim.cmd("colorscheme rose-pine")
-  end,
-}
-
+-- -- lua/plugins/rose-pine.lua
+-- return {
+--   "rose-pine/neovim",
+--   name = "rose-pine",
+--   config = function()
+--     require("rose-pine").setup({
+--       styles = {
+--         bold = true,
+--         italic = false,
+--         transparency = true,
+--       },
+--     })
+--     vim.cmd("colorscheme rose-pine")
+--   end,
+-- }
+--
 -- return {
 --   {
 --     "Mofiqul/vscode.nvim",
@@ -28,3 +28,18 @@ return {
 --     end,
 --   },
 -- }
+
+return {
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
+    },
+  },
+}
