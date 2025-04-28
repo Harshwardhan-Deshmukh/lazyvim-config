@@ -32,3 +32,10 @@ keymap("n", "<leader>ab", "Yp^", { desc = "Duplicate line and jump to first char
 
 -- Compile the current Java file
 keymap("n", "<leader>jc", ":term javac -d out %<CR>", { desc = "Compile Java File", silent = true, noremap = true })
+
+keymap("i", "<A-BS>", "<C-u>", { desc = "Delete entire line in insert mode (no yank)" })
+keymap("i", "<C-BS>", "<C-w>", { desc = "Delete word in insert mode (no yank)" })
+keymap("i", "<A-Left>", "<C-o>^", { desc = "Move to beginning of line in insert mode" })
+keymap("i", "<A-Right>", "<C-o>$", { desc = "Move to end of line in insert mode" })
+keymap("i", "<C-Left>", "<C-Left>", { desc = "Move back a word in insert mode" })
+keymap("i", "<C-Right>", "<C-Right>", { desc = "Move forward a word in insert mode" })
